@@ -13,33 +13,33 @@
 </head>
 
 <body>
-    <div class="container is-fluid">
-        <div class="header">
-            <img class="header__background" src="./images/header.png" alt="">
+    <div class="header">
+        <img class="header__background" src="./images/header.png" alt="">
 
-            <nav class="header__navbar" role="" aria-label="">
-                <div class="navbar-brand">
-                    <img class="header__navbar--logo" src="./images/travelly-free.png">
-                    <span class="header__navbar--my-brand">travelly</span>
-                </div>
-                <div class="navbar--menu">
-                    <i class="menu-icon fas fa-bars"></i>
-                </div>
-            </nav>
+        <nav class="header__navbar" role="" aria-label="">
+            <div class="navbar-brand">
+                <img class="header__navbar--logo" src="./images/travelly-free.png">
+                <span class="header__navbar--my-brand">travelly</span>
+            </div>
+            <div class="navbar--menu">
+                <i class="menu-icon fas fa-bars"></i>
+            </div>
+        </nav>
 
-            <div class="header__search">
-                <h1 class="search--text">Where will you go next?</h1>
+        <div class="header__search">
+            <h1 class="search--text">Where will you go next?</h1>
 
-                <div class="search-bar field is-grouped">
-                    <input class="input search-input" type="text" placeholder="Start typing...">
-                    <button class="search-button is-info">GO</button>
-                </div>
+            <div class="search-bar field is-grouped">
+                <input class="input search-input" type="text" placeholder="Start typing...">
+                <button class="search-button is-info">GO</button>
             </div>
         </div>
-        <!-- End header -->
 
+    </div>
+    <!-- End header -->
 
-        <div class="top-destinations">
+    <div class="top-destinations">
+        <div class="container">
             <div class="top-destinations__text">
                 <h3>TOP DESTINATIONS</h3>
                 <p>Some of the top destinations for your next summer adventure.</p>
@@ -50,39 +50,47 @@
                     <div class="column">
                         <img src="./images/Australia.png" alt="">
                         <p class="price">$1.095</p>
-                        <h3 class="destination">AMAZING AUSTRALIA</h3>
-                        <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
-                            places to go.</p>
+                        <div class="text">
+                            <h3 class="destination">AMAZING AUSTRALIA</h3>
+                            <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
+                                places to go.</p>
+                        </div>
                     </div>
                     <div class="column">
                         <img src="./images/SouthAmerica.png" alt="">
                         <p class="price">$1.295</p>
-                        <h3 class="destination">ANCIENT SOUTH AMERICA</h3>
-                        <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
-                            places to go.</p>
+                        <div class="text">
+                            <h3 class="destination">ANCIENT SOUTH AMERICA</h3>
+                            <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
+                                places to go.</p>
+                        </div>
                     </div>
                     <div class="column">
                         <img src="./images/NorthAmerical.png" alt="">
                         <p class="price">$695</p>
-                        <h3 class="destination">MORDERN NOUTH AMERICA</h3>
-                        <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
-                            places to go.</p>
+                        <div class="text">
+                            <h3 class="destination">MORDERN NOUTH AMERICA</h3>
+                            <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
+                                places to go.</p>
+                        </div>
                     </div>
                     <div class="column">
                         <img src="./images/Europe.png" alt="">
                         <p class="price">$295</p>
-                        <h3 class="destination">CLASSIC EUROPE</h3>
-                        <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
-                            places to go.</p>
+                        <div class="text">
+                            <h3 class="destination">CLASSIC EUROPE</h3>
+                            <p class="describe">Become inspired to travel to Australia. Discover fantastic thing to do &
+                                places to go.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-        <!-- End Top destinations -->
+    </div>
+    <!-- End Top destinations -->
 
 
+    <div class="container">
         <div class="before-you-leave">
             <div class="before-you-leave__text">
                 <h1>Before you leave</h1>
@@ -108,35 +116,29 @@
                 </div>
             </div>
 
-            <div class="before-you-leave__your-email">
-                <h2 class="your-email--text">
-                    GET HOTTEST DEALS TO YOUR INBOX
-                </h2>
-
-                <div class="your-email--input">
-                    <div class="field is-grouped">
-                        <p class="control is-expanded">
-                            <input class="input" type="text" placeholder="Email address">
-                        </p>
-                        <p class="control">
-                            <a class="button is-info">
-                                SUBSCRIBE
-                            </a>
-                        </p>
-                    </div>
+            <div class="before-you-leave__subscribe">
+                <h1 class="subscribe--text">GET HOTTEST DEALS TO YOUR INBOX</h1>
+                <div class="subscribe--bar field is-grouped">
+                    <input class="input email-input" type="text" placeholder="Email address">
+                    <button class="subscribe-button is-info">SUBSCRIBE</button>
                 </div>
-
             </div>
-        </div>
-        <!-- End befor-you-leave -->
 
-        <div class="footer">
+        </div>
+    </div>
+    <!-- End befor-you-leave -->
+
+
+    <div class="footer">
+        <div class="container">
             <div class="columns">
                 <div class="column is-three-quarters">
-                    Copyright C 2014 Travelly. All Rights Reserved. Designed for Despreneur.
+                    <p class="copyright">
+                        Copyright Ⓒ 2014 Travelly. All Rights Reserved. Designed for Despreneur.
+                    </p>
                 </div>
                 <div class="column">
-                    <ul>
+                    <ul class="items">
                         <li>HOME</li>
                         <li>ABOUT</li>
                         <li>BLOG</li>
@@ -147,6 +149,7 @@
             </div>
         </div>
     </div>
+    <!-- End Footer -->
 
 
     <script src="./javascript/script.js"></script>

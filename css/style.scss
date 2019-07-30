@@ -1,88 +1,238 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .header {
-    position: relative;
+  position: relative;
+  background-color: #EEEEEE;
 
-    .header__backgound {
-        width: 100%;
+  .header__background {
+    width: 100%;
+  }
+
+  .header__navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .navbar-brand {
+
+      display: inline-block;
+
+      .header__navbar--logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .header__navbar--my-brand {
+        font-size: 42px;
+        line-height: 42px;
+        padding-left: 20px;
+        color: #f4f3ee;
+      }
+
     }
 
-    .header__navbar {
+    .navbar--menu {
+      float: right;
+
+      .menu-icon {
+        font-size: 4.2rem;
+        color: #f4f3ee;
+      }
+    }
+
+  }
+
+  .header__search {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    .search--text {
+      font-size: 5.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f4f3ee;
+    }
+
+    .search-bar {
+      height: 40px;
+      width: 450px;
+      margin: auto;
+
+      .search-input {
+        height: 100%;
+        margin: 10px;
+      }
+
+      .search-button {
+        height: 100%;
+        margin: 10px;
+        width: 80px;
+      }
+    }
+
+  }
+}
+
+
+.top-destinations {
+  background-color: #EEEEEE;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+
+  .top-destinations__text {
+    padding-bottom: 30px;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #323232;
+    }
+
+    p {
+
+      font-size: 1.5rem;
+      color: #8b8b8b;
+    }
+  }
+
+
+  .top-destinations__image-group {
+
+    img {
+      width: 100%;
+      margin: 0;
+    }
+
+    .text {
+      margin: 0;
+      padding: 20px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .column {
+      position: relative;
+      margin: 10px;
+      padding: 0;
+      background-color: #FFFFFF;
+
+      .price {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-        padding-top: 30px;
-        padding-left: 100px;
-        padding-right: 100px;
+        top: 210px;
+        right: 20px;
 
-        .navbar-brand {
-
-            display: inline-block;
-
-            .header__navbar--logo {
-                width: 42px;
-                height: 42px;
-            }
-
-            .header__navbar--my-brand {
-                font-size: 42px;
-                line-height: 42px;
-                padding-left: 20px;
-                color: #f4f3ee;
-            }
-
-        }
-
-        .navbar--menu {
-            float: right;
-
-            .menu-icon {
-                font-size: 4.2rem;
-                color: #f4f3ee;
-            }
-        }
-        
+        font-size: 14px;
+        font-weight: 700;
+        color: #FFFFFF;
+      }
     }
-    .header__search {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        
-        .search--text {
-            font-size: 5.2rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #f4f3ee;
-        }
 
-        .search-bar {
-            height: 40px;
-            width: 450px;
-            margin: auto;
+  }
+}
 
-            .search-input{
-                height: 100%;
-                margin: 10px;
-            }
-            
-            .search-button {
-                height: 100%;
-                margin: 10px;
-                width: 80px;
-            }
-        }
-        
+
+.before-you-leave {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  .before-you-leave__text {
+    color: #323232;
+    font-size: 5.2rem;
+    padding-bottom: 3rem;
+    ;
+    padding-left: 2rem;
+  }
+
+  .before-you-leave__services {
+
+    .column {
+      padding: 2rem 4rem;
+
+      .service {
+        font-size: 1.7rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        color: #323232;
+
+      }
+
+      .describe {
+        font-size: 1.5rem;
+        color: #8b8b8b;
+      }
     }
+  }
+
+  .before-you-leave__subscribe{
+    .subscribe--text {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      color: #323232;
+    }
+
+    .subscribe--bar {
+      height: 40px;
+      width: 450px;
+      margin: auto;
+
+      .email-input {
+        height: 100%;
+        margin: 10px;
+      }
+
+      .subscribe-button {
+        height: 100%;
+        margin: 10px;
+        width: 80px;
+      }
+    }
+  }
+}
+
+
+.footer{
+  background-color: #EEEEEE;
+  padding: 30px;
+
+    .copyright{
+      font-size: 1.4rem;
+    }
+  
+    .items{
+  
+      li{
+        display: block;
+        float: left;
+        margin: auto 0.5rem;
+      }
+    }
+
+  
 }
