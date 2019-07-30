@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./plugins/bulma/bulma.min.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -14,38 +15,24 @@
 <body>
     <div class="container is-fluid">
         <div class="header">
-            <img class="backgound" src="./images/header.png" alt="">
+            <img class="header__background" src="./images/header.png" alt="">
 
-            <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+            <nav class="header__navbar" role="" aria-label="">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="">
-                        <img src="./images/travelly-free.png" width="25" height="25">
-                    </a>
-                    <span class="my-brand">travelly</span>
+                    <img class="header__navbar--logo" src="./images/travelly-free.png">
+                    <span class="header__navbar--my-brand">travelly</span>
                 </div>
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <i class="fas fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
+                <div class="navbar--menu">
+                    <i class="menu-icon fas fa-bars"></i>
                 </div>
             </nav>
 
-            <h1 class="header__text">Where will you go next?</h1>
+            <div class="header__search">
+                <h1 class="search--text">Where will you go next?</h1>
 
-            <div class="header__search-bar">
-                <div class="field is-grouped">
-                    <p class="control is-expanded">
-                        <input class="input" type="text" placeholder="Start typing...">
-                    </p>
-                    <p class="control">
-                        <a class="button is-info">
-                            GO
-                        </a>
-                    </p>
+                <div class="search-bar field is-grouped">
+                    <input class="input search-input" type="text" placeholder="Start typing...">
+                    <button class="search-button is-info">GO</button>
                 </div>
             </div>
         </div>
