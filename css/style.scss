@@ -1,6 +1,31 @@
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Light'), url('MyriadPro-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Bold'), url('MYRIADPRO-BOLD.woff') format('woff');
+}
+
+$font-first: Myriad Pro Regular;
+
 * {
   margin: 0;
   padding: 0;
+  font-family: $font-first;
+
 }
 
 html {
@@ -37,7 +62,9 @@ html {
 
       .header__navbar--my-brand {
         font-size: 42px;
+        height: 42px;
         line-height: 42px;
+        white-space: nowrap;
         padding-left: 20px;
         color: #f4f3ee;
       }
@@ -188,7 +215,7 @@ html {
     }
   }
 
-  .before-you-leave__subscribe{
+  .before-you-leave__subscribe {
     .subscribe--text {
       font-size: 2rem;
       text-align: center;
@@ -217,22 +244,21 @@ html {
 }
 
 
-.footer{
+.footer {
   background-color: #EEEEEE;
   padding: 30px;
 
-    .copyright{
-      font-size: 1.4rem;
-    }
-  
-    .items{
-  
-      li{
-        display: block;
-        float: left;
-        margin: auto 0.5rem;
-      }
-    }
+  .copyright {
+    font-size: 1.4rem;
+  }
 
-  
+  .items {
+
+    li {
+      display: block;
+      float: left;
+      margin: auto 0.5rem;
+    }
+  }
+
 }

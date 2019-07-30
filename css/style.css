@@ -1,6 +1,28 @@
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("MYRIADPRO-REGULAR.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Myriad Pro Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("MyriadPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Myriad Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("MYRIADPRO-BOLD.woff") format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: Myriad Pro Regular;
 }
 
 html {
@@ -39,7 +61,9 @@ html {
 
 .header .header__navbar .navbar-brand .header__navbar--my-brand {
   font-size: 42px;
+  height: 42px;
   line-height: 42px;
+  white-space: nowrap;
   padding-left: 20px;
   color: #f4f3ee;
 }
