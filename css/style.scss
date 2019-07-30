@@ -1,264 +1,330 @@
+@import '../plugins/bulma/bulma.sass';
+
 @font-face {
-  font-family: 'Myriad Pro Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Montserrat-Bold.ttf');
 }
 
 @font-face {
-  font-family: 'Myriad Pro Light';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Myriad Pro Light'), url('MyriadPro-Light.woff') format('woff');
+    font-family: 'Montserrat-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Montserrat-Light.ttf');
 }
 
 @font-face {
-  font-family: 'Myriad Pro Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Myriad Pro Bold'), url('MYRIADPRO-BOLD.woff') format('woff');
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Montserrat-Regular.ttf');
 }
 
-$font-first: Myriad Pro Regular;
+@font-face {
+    font-family: 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+$font-first: Montserrat-Regular;
+$font-second: OpenSans-Regular;
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: $font-first;
+    margin: 0;
+    padding: 0;
+    font-family: $font-first;
 
 }
 
 html {
-  font-size: 10px;
+    // font-size: 10px;
+
+    @include mobile {
+        font-size: 10px;
+    }
+
+    @include tablet {
+        font-size: 12px;
+
+    }
+
+    @include desktop {
+        font-size: 14px;
+
+    }
+
+    @include widescreen {
+        font-size: 16px;
+    }
+
+    @include fullhd {
+        font-size: 18px;
+    }
+
 }
 
 .header {
-  position: relative;
-  background-color: #EEEEEE;
+    position: relative;
+    background-color: #EEEEEE;
 
-  .header__background {
-    width: 100%;
-  }
+    .header__background {
+        width: 100%;
+    }
 
-  .header__navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-    padding-top: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
+    .header__navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        padding-top: 3rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
 
-    .navbar-brand {
+        .navbar-brand {
 
-      display: inline-block;
+            display: inline-block;
 
-      .header__navbar--logo {
-        width: 42px;
-        height: 42px;
-      }
+            .header__navbar--logo {
+                width: 2rem;
+                height: 2rem;
+            }
 
-      .header__navbar--my-brand {
-        font-size: 42px;
-        height: 42px;
-        line-height: 42px;
-        white-space: nowrap;
-        padding-left: 20px;
-        color: #f4f3ee;
-      }
+            .header__navbar--my-brand {
+                font-size: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+                white-space: nowrap;
+                padding-left: 1.25rem;
+                color: #f4f3ee;
+            }
+
+        }
+
+        .navbar--menu {
+            float: right;
+
+            .menu-icon {
+                font-size: 2.5rem;
+                color: #f4f3ee;
+            }
+        }
 
     }
 
-    .navbar--menu {
-      float: right;
+    .header__search {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
 
-      .menu-icon {
-        font-size: 4.2rem;
-        color: #f4f3ee;
-      }
+        .search--text {
+            font-size: 3.25rem;
+            font-family: "OpenSans-Light";
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f4f3ee;
+        }
+
+        .search-bar {
+            height: 40px;
+            width: 450px;
+            margin: auto;
+
+            .search-input {
+                height: 100%;
+                margin: 10px;
+            }
+
+            .search-button {
+                height: 100%;
+                margin: 10px;
+                width: 80px;
+            }
+        }
+
     }
-
-  }
-
-  .header__search {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    .search--text {
-      font-size: 5.2rem;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #f4f3ee;
-    }
-
-    .search-bar {
-      height: 40px;
-      width: 450px;
-      margin: auto;
-
-      .search-input {
-        height: 100%;
-        margin: 10px;
-      }
-
-      .search-button {
-        height: 100%;
-        margin: 10px;
-        width: 80px;
-      }
-    }
-
-  }
 }
 
 
 .top-destinations {
-  background-color: #EEEEEE;
-  padding-top: 70px;
-  padding-bottom: 70px;
+    background-color: #EEEEEE;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
 
-  .top-destinations__text {
-    padding-bottom: 30px;
+    .top-destinations__text {
+        padding-bottom: 30px;
 
-    h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #323232;
+        h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #323232;
+            font-family: $font-first;
+        }
+
+        p {
+            font-family: $font-second;
+            font-size: 1rem;
+            color: #8b8b8b;
+        }
     }
 
-    p {
 
-      font-size: 1.5rem;
-      color: #8b8b8b;
+    .top-destinations__image-group {
+
+        img {
+            width: 100%;
+            margin: 0;
+        }
+
+        .text {
+            margin: 0;
+            padding: 20px;
+
+            h3.destination {
+                font-size: 0.875rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+                font-family: $font-first;
+            }
+
+            p.describe {
+                font-size: 0.8125rem;
+                font-family: $font-second;
+            }
+        }
+
+        .column {
+            margin: 10px;
+            padding: 0;
+            background-color: #FFFFFF;
+
+            .filter {
+                position: relative;
+
+                .price {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 30px;
+                    font-family: $font-first;
+
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #FFFFFF;
+                }
+            }
+
+        }
+
     }
-  }
-
-
-  .top-destinations__image-group {
-
-    img {
-      width: 100%;
-      margin: 0;
-    }
-
-    .text {
-      margin: 0;
-      padding: 20px;
-
-      h3 {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 14px;
-      }
-    }
-
-    .column {
-      position: relative;
-      margin: 10px;
-      padding: 0;
-      background-color: #FFFFFF;
-
-      .price {
-        position: absolute;
-        top: 210px;
-        right: 20px;
-
-        font-size: 14px;
-        font-weight: 700;
-        color: #FFFFFF;
-      }
-    }
-
-  }
 }
 
 
 .before-you-leave {
-  padding-top: 70px;
-  padding-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
-  .before-you-leave__text {
-    color: #323232;
-    font-size: 5.2rem;
-    padding-bottom: 3rem;
-    ;
-    padding-left: 2rem;
-  }
-
-  .before-you-leave__services {
-
-    .column {
-      padding: 2rem 4rem;
-
-      .service {
-        font-size: 1.7rem;
-        font-weight: 700;
-        padding-bottom: 1rem;
+    .before-you-leave__text {
         color: #323232;
-
-      }
-
-      .describe {
-        font-size: 1.5rem;
-        color: #8b8b8b;
-      }
-    }
-  }
-
-  .before-you-leave__subscribe {
-    .subscribe--text {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 10px;
-      margin-top: 20px;
-      color: #323232;
+        font-size: 3.25rem;
+        padding-bottom: 3rem;
+        font-family: "OpenSans-Light";
+        padding-left: 2rem;
     }
 
-    .subscribe--bar {
-      height: 40px;
-      width: 450px;
-      margin: auto;
+    .before-you-leave__services {
 
-      .email-input {
-        height: 100%;
-        margin: 10px;
-      }
+        .column {
+            padding: 2rem 4rem;
 
-      .subscribe-button {
-        height: 100%;
-        margin: 10px;
-        width: 80px;
-      }
+            .service {
+                font-size: 1rem;
+                padding-bottom: 1rem;
+                color: #323232;
+                font-family: $font-first;
+
+            }
+
+            .describe {
+                font-size: 1rem;
+                font-family: $font-second;
+                color: #8b8b8b;
+            }
+        }
     }
-  }
+
+    .before-you-leave__subscribe {
+
+        .subscribe--text {
+            font-family: $font-first;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: #323232;
+        }
+
+        .subscribe--bar {
+            height: 40px;
+            width: 650px;
+            margin: auto;
+
+            .email-input {
+                height: 100%;
+                margin: 1rem 0;
+            }
+
+            .subscribe-button {
+                height: 100%;
+                margin: 1rem 0;
+                width: 150px;
+                font-size: 1rem;
+                font-family: "OpenSans-Bold";
+                background-color: #fd4f32;
+                color: #FFFFFF;
+            }
+        }
+    }
 }
 
 
 .footer {
-  background-color: #EEEEEE;
-  padding: 30px;
+    background-color: #EEEEEE;
+    padding: 30px;
 
-  .copyright {
-    font-size: 1.4rem;
-  }
-
-  .items {
-
-    li {
-      display: block;
-      float: left;
-      margin: auto 0.5rem;
+    .copyright {
+        font-family: $font-second;
+        font-size: 0.875rem;
     }
-  }
 
+    .items {
+        float: right;
+        li {
+            display: block;
+            float: left;
+            font-family: $font-first;
+            font-size: 0.875rem;
+            margin-right: 1.4rem;
+        }
+    }
+// TODO fix font-size more bigger
 }
