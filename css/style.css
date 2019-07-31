@@ -11596,81 +11596,103 @@ label.panel-block:hover {
 }
 
 @font-face {
-  font-family: 'Montserrat-Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/Montserrat-Bold.ttf");
-}
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Montserrat-Light.ttf");
-}
-
-@font-face {
-  font-family: 'Montserrat-Regular';
-  font-style: normal;
+  font-family: 'Montserrat';
   font-weight: normal;
-  src: url("../fonts/Montserrat-Regular.ttf");
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'OpenSans-Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/OpenSans-Bold.ttf");
-}
-
-@font-face {
-  font-family: 'OpenSans-Light';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/OpenSans-Light.ttf");
-}
-
-@font-face {
-  font-family: 'OpenSans-Regular';
-  font-style: normal;
+  font-family: 'OpenSans';
   font-weight: normal;
-  src: url("../fonts/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 300;
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 700;
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: Montserrat-Regular;
+  font-family: OpenSans;
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
-  }
+html {
+  font-size: 10px;
 }
 
-@media screen and (min-width: 769px), print {
-  html {
-    font-size: 12px;
-  }
+input,
+button {
+  outline: none !important;
+  border-radius: 0 !important;
+  font-size: 1.6rem !important;
 }
 
-@media screen and (min-width: 1024px) {
-  html {
-    font-size: 14px;
-  }
+button {
+  border: none;
+  font-family: OpenSans;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #fd4f32;
 }
 
-@media screen and (min-width: 1216px) {
-  html {
-    font-size: 16px;
-  }
+input:active,
+button:active,
+input:focus,
+button:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
-@media screen and (min-width: 1408px) {
-  html {
-    font-size: 18px;
-  }
+button:hover {
+  cursor: pointer;
+  background-color: #eb2d0d !important;
+}
+
+input::-webkit-input-placeholder {
+  font-family: OpenSans;
+  font-weight: none;
+  font-size: 1.6rem;
+}
+
+input:-ms-input-placeholder {
+  font-family: OpenSans;
+  font-weight: none;
+  font-size: 1.6rem;
+}
+
+input::-ms-input-placeholder {
+  font-family: OpenSans;
+  font-weight: none;
+  font-size: 1.6rem;
+}
+
+input::placeholder {
+  font-family: OpenSans;
+  font-weight: none;
+  font-size: 1.6rem;
 }
 
 .header {
@@ -11687,11 +11709,46 @@ label.panel-block:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  background-color: transparent;
-  padding-top: 3rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__navbar {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .header .header__navbar {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header .header__navbar {
+    padding-top: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .header .header__navbar {
+    padding-top: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .header .header__navbar {
+    padding-top: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 
 .header .header__navbar .navbar-brand {
@@ -11704,9 +11761,11 @@ label.panel-block:hover {
 }
 
 .header .header__navbar .navbar-brand .header__navbar--my-brand {
-  font-size: 2rem;
-  height: 2rem;
-  line-height: 2rem;
+  font-family: OpenSans;
+  font-weight: 300;
+  font-size: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
   white-space: nowrap;
   padding-left: 1.25rem;
   color: #f4f3ee;
@@ -11717,8 +11776,16 @@ label.panel-block:hover {
 }
 
 .header .header__navbar .navbar--menu .menu-icon {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: #f4f3ee;
+}
+
+.header .header__navbar .navbar--menu:hover {
+  cursor: pointer;
+}
+
+.header .header__navbar .navbar--menu:hover i {
+  color: #dfe4ea;
 }
 
 .header .header__search {
@@ -11730,28 +11797,58 @@ label.panel-block:hover {
 }
 
 .header .header__search .search--text {
-  font-size: 3.25rem;
-  font-family: "OpenSans-Light";
+  font-family: OpenSans;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 20px;
   color: #f4f3ee;
 }
 
+@media screen and (max-width: 768px) {
+  .header .header__search .search--text {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .header .header__search .search--text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header .header__search .search--text {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .header .header__search .search--text {
+    font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .header .header__search .search--text {
+    font-size: 52px;
+  }
+}
+
 .header .header__search .search-bar {
   height: 40px;
   width: 450px;
+  max-width: 90%;
   margin: auto;
 }
 
 .header .header__search .search-bar .search-input {
   height: 100%;
-  margin: 10px;
+  border: none;
 }
 
 .header .header__search .search-bar .search-button {
   height: 100%;
-  margin: 10px;
-  width: 80px;
+  width: 100px;
 }
 
 .top-destinations {
@@ -11761,19 +11858,21 @@ label.panel-block:hover {
 }
 
 .top-destinations .top-destinations__text {
-  padding-bottom: 30px;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
 }
 
 .top-destinations .top-destinations__text h3 {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.6rem;
   color: #323232;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat;
+  font-weight: normal;
 }
 
 .top-destinations .top-destinations__text p {
-  font-family: OpenSans-Regular;
-  font-size: 1rem;
+  font-family: OpenSans;
+  font-size: 1.5rem;
+  font-weight: normal;
   color: #8b8b8b;
 }
 
@@ -11788,34 +11887,52 @@ label.panel-block:hover {
 }
 
 .top-destinations .top-destinations__image-group .text h3.destination {
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 1.4rem;
   margin-bottom: 10px;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat;
+  font-weight: normal;
 }
 
 .top-destinations .top-destinations__image-group .text p.describe {
-  font-size: 0.8125rem;
-  font-family: OpenSans-Regular;
+  font-size: 1.3rem;
+  font-family: OpenSans;
+  font-weight: normal;
 }
 
-.top-destinations .top-destinations__image-group .column {
-  margin: 10px;
+.top-destinations .top-destinations__image-group .columns .column {
   padding: 0;
   background-color: #FFFFFF;
 }
 
-.top-destinations .top-destinations__image-group .column .filter {
+@media screen and (max-width: 768px) {
+  .top-destinations .top-destinations__image-group .columns .column {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .top-destinations .top-destinations__image-group .columns .column {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-destinations .top-destinations__image-group .columns .column {
+    margin: 10px auto;
+  }
+}
+
+.top-destinations .top-destinations__image-group .columns .column .filter {
   position: relative;
 }
 
-.top-destinations .top-destinations__image-group .column .filter .price {
+.top-destinations .top-destinations__image-group .columns .column .filter .price {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
-  font-family: Montserrat-Regular;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: Montserrat;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: normal;
   color: #FFFFFF;
 }
 
@@ -11826,9 +11943,10 @@ label.panel-block:hover {
 
 .before-you-leave .before-you-leave__text {
   color: #323232;
-  font-size: 3.25rem;
+  font-size: 5.2rem;
   padding-bottom: 3rem;
-  font-family: "OpenSans-Light";
+  font-family: OpenSans;
+  font-weight: 300;
   padding-left: 2rem;
 }
 
@@ -11837,21 +11955,23 @@ label.panel-block:hover {
 }
 
 .before-you-leave .before-you-leave__services .column .service {
-  font-size: 1rem;
-  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
   color: #323232;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat;
+  font-weight: normal;
 }
 
 .before-you-leave .before-you-leave__services .column .describe {
-  font-size: 1rem;
-  font-family: OpenSans-Regular;
+  font-size: 1.5rem;
+  font-family: OpenSans;
   color: #8b8b8b;
 }
 
 .before-you-leave .before-you-leave__subscribe .subscribe--text {
-  font-family: Montserrat-Regular;
-  font-size: 1rem;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 1.6rem;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -11861,20 +11981,23 @@ label.panel-block:hover {
 .before-you-leave .before-you-leave__subscribe .subscribe--bar {
   height: 40px;
   width: 650px;
+  max-width: 90%;
   margin: auto;
 }
 
 .before-you-leave .before-you-leave__subscribe .subscribe--bar .email-input {
   height: 100%;
   margin: 1rem 0;
+  border: 1px solid #bdc3c7;
 }
 
 .before-you-leave .before-you-leave__subscribe .subscribe--bar .subscribe-button {
   height: 100%;
   margin: 1rem 0;
   width: 150px;
-  font-size: 1rem;
-  font-family: "OpenSans-Bold";
+  font-size: 1.6rem;
+  font-family: OpenSans;
+  font-weight: 700;
   background-color: #fd4f32;
   color: #FFFFFF;
 }
@@ -11885,8 +12008,9 @@ label.panel-block:hover {
 }
 
 .footer .copyright {
-  font-family: OpenSans-Regular;
-  font-size: 0.875rem;
+  font-family: OpenSans;
+  font-weight: normal;
+  font-size: 1.4rem;
 }
 
 .footer .items {
@@ -11896,8 +12020,9 @@ label.panel-block:hover {
 .footer .items li {
   display: block;
   float: left;
-  font-family: Montserrat-Regular;
-  font-size: 0.875rem;
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: normal;
   margin-right: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,82 +1,96 @@
 @import '../plugins/bulma/bulma.sass';
 
 @font-face {
-    font-family: 'Montserrat-Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/Montserrat-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Montserrat-Light';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/Montserrat-Light.ttf');
-}
-
-@font-face {
-    font-family: 'Montserrat-Regular';
-    font-style: normal;
+    font-family: 'Montserrat';
     font-weight: normal;
-    src: url('../fonts/Montserrat-Regular.ttf');
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'OpenSans-Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/OpenSans-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'OpenSans-Light';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/OpenSans-Light.ttf');
-}
-
-@font-face {
-    font-family: 'OpenSans-Regular';
-    font-style: normal;
+    font-family: 'OpenSans';
     font-weight: normal;
-    src: url('../fonts/OpenSans-Regular.ttf');
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
 
-$font-first: Montserrat-Regular;
-$font-second: OpenSans-Regular;
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-weight: 300;
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-weight: 700;
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+$font-Montserrat: Montserrat;
+$font-OpenSans: OpenSans;
+
+$font-sz52: 5.2rem;
+$font-sz32: 3.2rem;
+$font-sz16: 1.6rem;
+$font-sz15: 1.5rem;
+$font-sz14: 1.4rem;
+$font-sz13: 1.3rem;
+$font-sz12: 1.2rem;
 
 * {
     margin: 0;
     padding: 0;
-    font-family: $font-first;
-
+    font-family: $font-OpenSans;
 }
 
 html {
-    // font-size: 10px;
+    font-size: 10px;
+}
 
-    @include mobile {
-        font-size: 10px;
-    }
+input,
+button {
+    outline: none !important;
+    border-radius: 0 !important;
+    font-size: $font-sz16 !important;
+}
 
-    @include tablet {
-        font-size: 12px;
+button {
+    border: none;
+    font-family: $font-OpenSans;
+    font-size: $font-sz16;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #fd4f32;
+}
 
-    }
+input:active,
+button:active,
+input:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
-    @include desktop {
-        font-size: 14px;
+button:hover {
+    cursor: pointer;
+    background-color: #eb2d0d !important;
+}
 
-    }
 
-    @include widescreen {
-        font-size: 16px;
-    }
-
-    @include fullhd {
-        font-size: 18px;
-    }
-
+input::placeholder {
+    font-family: $font-OpenSans;
+    font-weight: none;
+    font-size: $font-sz16;
 }
 
 .header {
@@ -92,14 +106,44 @@ html {
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
-        background-color: transparent;
-        padding-top: 3rem;
-        padding-left: 10rem;
-        padding-right: 10rem;
+        // padding-top: 3rem;
+        // padding-left: 10rem;
+        // padding-right: 10rem;
+
+        @include mobile {
+            padding-top: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+        }
+
+        @include tablet {
+            padding-top: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        @include desktop {
+            padding-top: 3rem;
+            padding-left: 10rem;
+            padding-right: 10rem;
+
+        }
+
+        @include widescreen {
+            padding-top: 3rem;
+            padding-left: 10rem;
+            padding-right: 10rem;
+
+        }
+
+        @include fullhd {
+            padding-top: 3rem;
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
 
         .navbar-brand {
-
             display: inline-block;
 
             .header__navbar--logo {
@@ -108,13 +152,18 @@ html {
             }
 
             .header__navbar--my-brand {
-                font-size: 2rem;
-                height: 2rem;
-                line-height: 2rem;
+                $sz: $font-sz32;
+                font-family: $font-OpenSans;
+                font-weight: 300;
+                font-size: $sz;
+                height: $sz;
+                line-height: $sz;
                 white-space: nowrap;
                 padding-left: 1.25rem;
                 color: #f4f3ee;
             }
+
+
 
         }
 
@@ -122,8 +171,16 @@ html {
             float: right;
 
             .menu-icon {
-                font-size: 2.5rem;
+                font-size: $font-sz32;
                 color: #f4f3ee;
+            }
+        }
+
+        .navbar--menu:hover {
+            cursor: pointer;
+            i{
+                color: #dfe4ea;
+
             }
         }
 
@@ -137,8 +194,28 @@ html {
         transform: translate(-50%, -50%);
 
         .search--text {
-            font-size: 3.25rem;
-            font-family: "OpenSans-Light";
+            @include mobile {
+                font-size: 30px;
+            }
+
+            @include tablet {
+                font-size: 40px;
+            }
+
+            @include desktop {
+                font-size: 45px;
+            }
+
+            @include widescreen {
+                font-size: 52px;
+            }
+
+            @include fullhd {
+                font-size: 52px;
+            }
+
+            font-family: $font-OpenSans;
+            font-weight: 300;
             text-align: center;
             margin-bottom: 20px;
             color: #f4f3ee;
@@ -147,18 +224,21 @@ html {
         .search-bar {
             height: 40px;
             width: 450px;
+            max-width: 90%;
             margin: auto;
 
             .search-input {
                 height: 100%;
-                margin: 10px;
+                border: none;
             }
 
             .search-button {
                 height: 100%;
-                margin: 10px;
-                width: 80px;
+                width: 100px;
+
             }
+
+
         }
 
     }
@@ -172,18 +252,20 @@ html {
 
 
     .top-destinations__text {
-        padding-bottom: 30px;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
 
         h3 {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: $font-sz16;
             color: #323232;
-            font-family: $font-first;
+            font-family: $font-Montserrat;
+            font-weight: normal;
         }
 
         p {
-            font-family: $font-second;
-            font-size: 1rem;
+            font-family: $font-OpenSans;
+            font-size: $font-sz15;
+            font-weight: normal;
             color: #8b8b8b;
         }
     }
@@ -201,39 +283,56 @@ html {
             padding: 20px;
 
             h3.destination {
-                font-size: 0.875rem;
-                font-weight: 700;
+                font-size: $font-sz14;
                 margin-bottom: 10px;
-                font-family: $font-first;
+                font-family: $font-Montserrat;
+                font-weight: normal;
             }
 
             p.describe {
-                font-size: 0.8125rem;
-                font-family: $font-second;
+                font-size: $font-sz13;
+                font-family: $font-OpenSans;
+                font-weight: normal;
+
             }
         }
 
-        .column {
-            margin: 10px;
-            padding: 0;
-            background-color: #FFFFFF;
-
-            .filter {
-                position: relative;
-
-                .price {
-                    position: absolute;
-                    bottom: 20px;
-                    right: 30px;
-                    font-family: $font-first;
-
-                    font-size: 20px;
-                    font-weight: 700;
-                    color: #FFFFFF;
+        .columns {
+            .column {
+                @include mobile {
+                    margin: 20px auto;
                 }
+
+                @include tablet {
+                    margin: 20px auto;
+                }
+
+                @include desktop {
+                    margin: 10px auto;
+                }
+
+                padding: 0;
+                background-color: #FFFFFF;
+
+                .filter {
+                    position: relative;
+
+                    .price {
+                        position: absolute;
+                        bottom: 1rem;
+                        right: 1rem;
+                        font-family: $font-Montserrat;
+
+                        font-size: 20px;
+                        font-weight: normal;
+                        color: #FFFFFF;
+                    }
+                }
+
             }
 
         }
+
 
     }
 }
@@ -245,9 +344,10 @@ html {
 
     .before-you-leave__text {
         color: #323232;
-        font-size: 3.25rem;
+        font-size: $font-sz52;
         padding-bottom: 3rem;
-        font-family: "OpenSans-Light";
+        font-family: $font-OpenSans;
+        font-weight: 300;
         padding-left: 2rem;
     }
 
@@ -257,16 +357,16 @@ html {
             padding: 2rem 4rem;
 
             .service {
-                font-size: 1rem;
-                padding-bottom: 1rem;
+                font-size: $font-sz16;
+                padding-bottom: 0.5rem;
                 color: #323232;
-                font-family: $font-first;
-
+                font-family: $font-Montserrat;
+                font-weight: normal;
             }
 
             .describe {
-                font-size: 1rem;
-                font-family: $font-second;
+                font-size: $font-sz15;
+                font-family: $font-OpenSans;
                 color: #8b8b8b;
             }
         }
@@ -275,8 +375,9 @@ html {
     .before-you-leave__subscribe {
 
         .subscribe--text {
-            font-family: $font-first;
-            font-size: 1rem;
+            font-family: $font-Montserrat;
+            font-weight: normal;
+            font-size: $font-sz16;
             text-align: center;
             margin-bottom: 10px;
             margin-top: 20px;
@@ -286,19 +387,23 @@ html {
         .subscribe--bar {
             height: 40px;
             width: 650px;
+            max-width: 90%;
             margin: auto;
 
             .email-input {
                 height: 100%;
                 margin: 1rem 0;
+                border: 1px solid #bdc3c7;
             }
+
 
             .subscribe-button {
                 height: 100%;
                 margin: 1rem 0;
                 width: 150px;
-                font-size: 1rem;
-                font-family: "OpenSans-Bold";
+                font-size: $font-sz16;
+                font-family: $font-OpenSans;
+                font-weight: 700;
                 background-color: #fd4f32;
                 color: #FFFFFF;
             }
@@ -312,19 +417,21 @@ html {
     padding: 30px;
 
     .copyright {
-        font-family: $font-second;
-        font-size: 0.875rem;
+        font-family: $font-OpenSans;
+        font-weight: normal;
+        font-size: $font-sz14;
     }
 
     .items {
         float: right;
+
         li {
             display: block;
             float: left;
-            font-family: $font-first;
-            font-size: 0.875rem;
+            font-family: $font-Montserrat;
+            font-size: $font-sz14;
+            font-weight: normal;
             margin-right: 1.4rem;
         }
     }
-// TODO fix font-size more bigger
 }
